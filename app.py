@@ -7,7 +7,10 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
+@app.route('/register')
+def register():
+    return render_template('register.html')
+
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5055))
-    set
     app.run(debug=True, port=port)
